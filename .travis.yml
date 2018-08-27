@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "nightly"
+
+install:
+  - pip install pycodestyle
+  - pip install -r requirements/dev.txt
+  - pip install -e .
+
+script:
+  - pycodestyle .
+  - py.test -q --cov=model_fit tests/
