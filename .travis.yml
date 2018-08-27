@@ -9,8 +9,8 @@ python:
   - "nightly"
 
 install:
-  - pip install pycodestyle
-  - pip install -r requirements/dev.txt
+  - pip install -q pycodestyle
+  - pip install -q -r requirements/dev.txt
   - pip install -e .
 
 script:
