@@ -8,6 +8,7 @@ python:
   - "nightly"
 
 install:
+  - pip install -q codecov
   - pip install -q pycodestyle
   - pip install -q -r requirements/dev.txt
   - pip install -e .
@@ -15,3 +16,6 @@ install:
 script:
   - pycodestyle .
   - py.test -q --cov=model_fit tests/
+
+after_success:
+  - codecov
