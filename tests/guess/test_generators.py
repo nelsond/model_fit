@@ -66,6 +66,5 @@ def test_firstmoment():
 def test_secondmoment():
     x = np.array([0, 1, 2, 3, 4])
     y = np.array([1, 1, 2, 1, 1])
-    secondmoment = (y*(x-2)**2) / np.sum(y)
 
-    assert(pytest.approx(g.secondmoment(x, y), 1.6667))
+    assert g.secondmoment(x, y) == pytest.approx(1.666666667)
