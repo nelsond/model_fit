@@ -1,4 +1,4 @@
 -r common.txt
-pytest==3.7
+pytest==3.7.4
 pytest-cov==2.5
 matplotlib>=2.0
